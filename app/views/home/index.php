@@ -3,4 +3,4 @@
     <a href="<?= BASEURL; ?>/auth/logout">logout</a>
 </div>
 
-test
+tests
