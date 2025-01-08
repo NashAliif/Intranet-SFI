@@ -2,5 +2,3 @@
     Dashboard
     <a href="<?= BASEURL; ?>/auth/logout">logout</a>
 </div>
-
-tests
