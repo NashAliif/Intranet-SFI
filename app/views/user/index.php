@@ -1,7 +1,7 @@
 <div id="content">
     <div class="shadow-sm mt-3 mx-3 border rounded-4 bg-light">
         <div class="border-bottom">
-            <h5 class="fw-bold p-4 m-0 w-100">Accounts Management</h5>
+            <h5 class="p-4 m-0 w-100">Accounts Management</h5>
         </div>
         <div class="p-4">
 
@@ -134,7 +134,7 @@
                         $i = $startIndex + 1;
                         foreach ($userToShow as $user) : ?>
                             <tr class="text-center">
-                                <th scope="row"><?= $i++; ?></th>
+                                <th scope="row" class="align-middle"><?= $i++; ?></th>
                                 <td class="align-middle"><?= htmlspecialchars($user['email']); ?></td>
                                 <td class="align-middle"><?= htmlspecialchars($user['full_name']); ?></td>
                                 <?php
