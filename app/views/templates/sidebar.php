@@ -1,16 +1,19 @@
 <?php
+$adminItems = [
+    [
+        "title" => "Accounts",
+        "url" => BASEURL . "/user/index",
+        "icon" => "bi bi-people-fill",
+        "id" => "nav-link2"
+    ]
+    ];
+
 $menuItems = [
     [
         "title" => "Dashboard",
         "url" => BASEURL . "/",
         "icon" => "bi bi-grid-1x2-fill",
         "id" => "nav-link1"
-    ],
-    [
-        "title" => "Accounts",
-        "url" => BASEURL . "/user/index",
-        "icon" => "bi bi-people-fill",
-        "id" => "nav-link2"
     ],
     [
         "title" => "Assets",
@@ -29,6 +32,10 @@ $menuItems = [
             </a>
         </div>
         <div>
+            <?php if ($_SESSION['role_id'] != null && $_SESSION['role_id'] == 1) {
+                $menuItems = array_merge($menuItems, $adminItems);
+                }
+            ?>
             <ul class="m-0 p-0 d-flex flex-column gap-1">
                 <?php foreach ($menuItems as $item): ?>
                     <li class="d-flex">

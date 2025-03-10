@@ -2,7 +2,7 @@
 
 class App
 {
-    public $controller = 'home';
+    public $controller = 'dashboard';
     public $method = 'index';
     public $params = [];
 

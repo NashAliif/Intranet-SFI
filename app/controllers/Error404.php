@@ -7,6 +7,6 @@ class Error404 extends Controller
         $data['title'] = 'Error404';
         $this->view('templates/header', $data);
         $this->view('error/index');
-        $this->view('templates/footer');
+        // $this->view('templates/footer');
     }
 }

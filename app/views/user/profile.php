@@ -20,15 +20,18 @@
                 </div>
                 <div class="mb-3">
                     <label for="FullName" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="FullName" name="full_name" value="<?= htmlspecialchars($user['full_name']); ?>" />
+                    <input type="text" class="form-control" id="FullName" name="full_name" 
+                           value="<?= htmlspecialchars($user['full_name'] ?? ''); ?>" />
                 </div>
                 <div class="mb-3">
                     <label for="Telephone" class="form-label">Telephone</label>
-                    <input type="text" class="form-control" id="Telephone" name="telephone" value="<?= htmlspecialchars($user['telephone']); ?>" />
+                    <input type="text" class="form-control" id="Telephone" name="telephone" 
+                           value="<?= htmlspecialchars($user['telephone'] ?? ''); ?>" />
                 </div>
                 <div class="mb-3">
                     <label for="Address" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="Address" name="address" value="<?= htmlspecialchars($user['address']); ?>" />
+                    <input type="text" class="form-control" id="Address" name="address" 
+                           value="<?= htmlspecialchars($user['address'] ?? ''); ?>" />
                 </div>
                 <div class="mb-3">
                     <label for="Instance" class="form-label">Instance</label>

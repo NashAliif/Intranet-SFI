@@ -1,6 +1,6 @@
 <?php
 
-class Home extends Controller
+class Dashboard extends Controller
 {
     public function __construct()
     {
@@ -9,15 +9,19 @@ class Home extends Controller
 
     public function index()
     {
-        $data['title'] = 'Home';
+        $data['title'] = 'Dashboard';
+        $data['dailyPresent'] = DashboardModel::getDailyPresent();
         $this->view('templates/header', $data);
 
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
+        
+
+        // var_dump($data);
         $this->view('templates/sidebar');
         $this->view('templates/navbar');
-        $this->view('Home/index');
+        $this->view('Dashboard/index', $data);
         $this->view('templates/footer');
     }
 }
